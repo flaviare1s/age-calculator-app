@@ -7,28 +7,36 @@
   <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32x32.png">
 
   <link rel="stylesheet" href="output.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
   
   <title>Frontend Mentor | Age calculator app</title>
 
 </head>
-<body>
+<body class="font-Poppins">
 
-  Day
-  DD
-
-  Month
-  MM
-
-  Year
-  YYYY
-
-  -- years
-  -- months
-  -- days
+  <main>
+    <form>
+      <label for="Day">Day</label>
+      <input type="number" id="day" name="day">DD</input>
+      <label for="month">Month</label>
+      <input type="number" id="month" name="month">MM</input>
+      <label for="year">Year</label>
+      <input type="number" id="year" name="year">YYYY</input>
+    </form>
+    <img class="bg-purple" src="../assets/images/icon-arrow.svg" alt="Icon Arrow">
+    <div>
+      <div><span>--</span> years</div>
+      <div><span>--</span> months</div>
+      <div><span>--</span> days</div>
+    </div>
+  </main>
   
   <div class="text-xs text-center">
-    Challenge by <a class="font-bold" href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a class="font-bold" href="https://github.com/flaviare1s/">Flávia Reis</a>.
+    Challenge by <a class="font-bold text-purple" href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a class="font-bold text-purple" href="https://github.com/flaviare1s/">Flávia Reis</a>.
   </div>
 </body>
 </html>
