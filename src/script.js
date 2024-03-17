@@ -80,6 +80,8 @@ function formValidation(event) {
     ageYears.innerText = age.years
     ageMonths.innerText = age.months
     ageDays.innerText = age.days
+
+    resetErrors()
 }
 
 function ageCalculate(birthdate) {
@@ -101,6 +103,14 @@ function ageCalculate(birthdate) {
     return { years, months, days }
 }
 
+function resetErrors() {
+    errorDay.innerText = ''
+    errorMonth.innerText = ''
+    errorYear.innerText = ''
+    labels.forEach(label => label.classList.remove('invalid'))
+    inputs.forEach(input => input.classList.remove('invalid'))
+}
+
 button.addEventListener('click', function(event) {
     event.preventDefault()
     formValidation(event)
@@ -110,7 +120,7 @@ button.addEventListener('click', function(event) {
 form.addEventListener('submit', function(event) {
     event.preventDefault()
     formValidation(event)
-});
+})
 
 
 
