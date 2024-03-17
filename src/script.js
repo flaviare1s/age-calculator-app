@@ -101,9 +101,16 @@ function ageCalculate(birthdate) {
     return { years, months, days }
 }
 
-button.addEventListener('click', formValidation)
+button.addEventListener('click', function(event) {
+    event.preventDefault()
+    formValidation(event)
+})
 
-form.addEventListener('submit', formValidation)
+
+form.addEventListener('submit', function(event) {
+    event.preventDefault()
+    formValidation(event)
+});
 
 
 
