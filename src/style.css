@@ -1,5 +1,10 @@
+.invalid {
+    color: #FF5959;
+}
 
-
+input.invalid {
+    border: 1px solid #FF5959;
+}
 
   @media (min-width: 768px) {
     .striped-background {
