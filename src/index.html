@@ -18,7 +18,7 @@
 <body class="font-Poppins flex flex-col justify-center items-center m-auto sm:h-screen bg-light_grey">
 
   <main class="w-[95%] sm:w-1 md:w-[60%] bg-white mt-[88px] px-6 md:px-14 py-12 rounded-tl-3xl rounded-tr-3xl rounded-bl-3xl rounded-br-[100px]">
-    <form class="w-full grid grid-cols-3">
+    <form class="w-full md:w-[80%] grid grid-cols-3">
       <div class="flex flex-col">
         <label class="text-xs md:text-sm font-bold text-grey uppercase tracking-[25%]" for="Day">Day</label>
         <input class="border p-3 rounded-lg text-black font-bold text-xl md:text-[32px] tracking-[1%] w-[90%]" type="number" id="day" name="day" placeholder="DD"></input>
@@ -32,9 +32,11 @@
         <input class="border p-3 rounded-lg text-black font-bold text-xl md:text-[32px] tracking-[1%] w-[90%]" type="number" id="year" name="year" placeholder="YYYY"></input>
       </div>
     </form>
-    <div>
-      <hr>
-      <img class="bg-purple" src="../assets/images/icon-arrow.svg" alt="Icon Arrow">
+    <div class="h-16 md:h-24 flex flex-col justify-center items-center md:items-end my-8 md:my-0 relative">
+      <hr class="w-full border border-light_grey absolute bottom-[50%] z-0">
+      <div class="bg-purple rounded-full h-16 w-16 md:h-24 md:w-24 flex flex-col items-center justify-center z-10">
+        <img class="h-6 md:h-11 w-6 md:w-11 z-20" src="../assets/images/icon-arrow.svg" alt="Icon Arrow">
+      </div>
     </div>
     <div>
       <div><span>--</span> years</div>
