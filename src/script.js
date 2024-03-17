@@ -72,7 +72,7 @@ function formValidation(event) {
         ageYears.innerText = '--'
         ageMonths.innerText = '--'
         ageDays.innerText = '--'
-        return;
+        return
     }
 
     const birthdate = new Date(`${yearInput.value}-${monthInput.value}-${dayInput.value}`)
