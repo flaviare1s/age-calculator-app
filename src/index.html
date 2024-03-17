@@ -15,18 +15,27 @@
   <title>Frontend Mentor | Age calculator app</title>
 
 </head>
-<body class="font-Poppins">
+<body class="font-Poppins flex flex-col justify-center items-center m-auto sm:h-screen bg-light_grey">
 
-  <main>
-    <form>
-      <label for="Day">Day</label>
-      <input type="number" id="day" name="day">DD</input>
-      <label for="month">Month</label>
-      <input type="number" id="month" name="month">MM</input>
-      <label for="year">Year</label>
-      <input type="number" id="year" name="year">YYYY</input>
+  <main class="w-[95%] sm:w-1 md:w-[60%] bg-white mt-[88px] px-6 md:px-14 py-12 rounded-tl-3xl rounded-tr-3xl rounded-bl-3xl rounded-br-[100px]">
+    <form class="w-full grid grid-cols-3">
+      <div class="flex flex-col">
+        <label class="text-xs md:text-sm font-bold text-grey uppercase tracking-[25%]" for="Day">Day</label>
+        <input class="border p-3 rounded-lg text-black font-bold text-xl md:text-[32px] tracking-[1%] w-[90%]" type="number" id="day" name="day" placeholder="DD"></input>
+      </div>
+      <div class="flex flex-col">
+        <label class="text-xs md:text-sm font-bold text-grey uppercase tracking-[25%]" for="month">Month</label>
+        <input class="border p-3 rounded-lg text-black font-bold text-xl md:text-[32px] tracking-[1%] w-[90%]" type="number" id="month" name="month" placeholder="MM"></input>
+      </div>
+      <div class="flex flex-col">
+        <label class="text-xs md:text-sm font-bold text-grey uppercase tracking-[25%]" for="year">Year</label>
+        <input class="border p-3 rounded-lg text-black font-bold text-xl md:text-[32px] tracking-[1%] w-[90%]" type="number" id="year" name="year" placeholder="YYYY"></input>
+      </div>
     </form>
-    <img class="bg-purple" src="../assets/images/icon-arrow.svg" alt="Icon Arrow">
+    <div>
+      <hr>
+      <img class="bg-purple" src="../assets/images/icon-arrow.svg" alt="Icon Arrow">
+    </div>
     <div>
       <div><span>--</span> years</div>
       <div><span>--</span> months</div>
