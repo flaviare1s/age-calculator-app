@@ -103,5 +103,7 @@ function ageCalculate(birthdate) {
 
 button.addEventListener('click', formValidation)
 
+form.addEventListener('submit', formValidation)
+
 
 
