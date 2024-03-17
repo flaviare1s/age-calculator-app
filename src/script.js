@@ -29,6 +29,9 @@ function formValidation(event) {
         inputs.forEach((input) => {
             input.classList.add('invalid')
         })
+        ageYears.innerText = '--'
+        ageMonths.innerText = '--'
+        ageDays.innerText = '--'
     }
 
     if(dayInput.value === '') {
@@ -50,18 +53,26 @@ function formValidation(event) {
     }
     else if(yearInput.value > currentYear) {
         errorYear.innerText = 'Must be in the past'
+        ageYears.innerText = '--'
+        ageMonths.innerText = '--'
+        ageDays.innerText = '--'
         labels.forEach((label) => {
             label.classList.add('invalid')
         })
         inputs.forEach((input) => {
             input.classList.add('invalid')
         })
+        return
     }
 
     if (!isValidDate(yearInput.value, monthInput.value, dayInput.value)) {
         if (errorDay.innerText === '' && errorMonth.innerText === '' && errorYear.innerText === '') {
             errorDay.innerText = 'Must be a valid date'
         }
+        ageYears.innerText = '--'
+        ageMonths.innerText = '--'
+        ageDays.innerText = '--'
+        return;
     }
 
     const birthdate = new Date(`${yearInput.value}-${monthInput.value}-${dayInput.value}`)
