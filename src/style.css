@@ -5,10 +5,3 @@
 input.invalid {
     border: 1px solid #FF5959;
 }
-
-  @media (min-width: 768px) {
-    .striped-background {
-        background-image: linear-gradient(90deg, hsl(0, 0%, 94%) 50%, #ebeaea 50%);
-        background-size: 100px 100%; 
-      }
-  }

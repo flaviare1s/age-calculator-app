@@ -1034,6 +1034,14 @@ video {
     align-items: flex-end;
   }
 
+  .md\:rounded-br-\[100px\] {
+    border-bottom-right-radius: 100px;
+  }
+
+  .md\:rounded-br-\[200px\] {
+    border-bottom-right-radius: 200px;
+  }
+
   .md\:px-14 {
     padding-left: 3.5rem;
     padding-right: 3.5rem;
@@ -1112,5 +1120,17 @@ video {
 @media (min-width: 1280px) {
   .xl\:w-\[60\%\] {
     width: 60%;
+  }
+
+  .xl\:w-\[65\%\] {
+    width: 65%;
+  }
+
+  .xl\:w-\[63\%\] {
+    width: 63%;
+  }
+
+  .xl\:w-\[62\%\] {
+    width: 62%;
   }
 }
