@@ -9,6 +9,10 @@ const errorDay = document.querySelector('#error-day')
 const errorMonth = document.querySelector('#error-month')
 const errorYear = document.querySelector('#error-year')
 const currentYear = new Date().getFullYear()
+const ageDays = document.querySelector('#ageDays')
+const ageMonths = document.querySelector('#ageMonths')
+const ageYears = document.querySelector('#ageYears')
+
 
 function isValidDate(year, month, day) {
     const date = new Date(year, month - 1, day)
@@ -16,7 +20,7 @@ function isValidDate(year, month, day) {
 }
 
     
-function ageCalculate(event) {
+function formValidation(event) {
     event.preventDefault()
     if(!form.checkValidity()) {
         labels.forEach((label) => {
@@ -59,9 +63,34 @@ function ageCalculate(event) {
             errorDay.innerText = 'Must be a valid date'
         }
     }
+
+    const birthdate = new Date(`${yearInput.value}-${monthInput.value}-${dayInput.value}`)
+    const age = ageCalculate(birthdate)
+    ageYears.innerText = age.years
+    ageMonths.innerText = age.months
+    ageDays.innerText = age.days
 }
 
-button.addEventListener('click', ageCalculate)
+function ageCalculate(birthdate) {
+    const currentDate = new Date()
+    let years = currentDate.getFullYear() - birthdate.getFullYear()
+    let months = currentDate.getMonth() - birthdate.getMonth()
+    let days = currentDate.getDate() - birthdate.getDate()
+
+    if (months < 0 || (months === 0 && days < 0)) {
+        years--
+        months += 12
+    }
+    if (days < 0) {
+        const tempDate = new Date(currentDate);
+        tempDate.setMonth(currentDate.getMonth() - 1)
+        days = Math.floor((currentDate - tempDate) / (1000 * 60 * 60 * 24))
+    }
+
+    return { years, months, days }
+}
+
+button.addEventListener('click', formValidation)
 
 
 
