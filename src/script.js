@@ -12,13 +12,13 @@ const currentYear = new Date().getFullYear()
 const ageDays = document.querySelector('#ageDays')
 const ageMonths = document.querySelector('#ageMonths')
 const ageYears = document.querySelector('#ageYears')
+const spans = document.querySelectorAll('#age span')
 
 
 function isValidDate(year, month, day) {
     const date = new Date(year, month - 1, day)
     return date.getFullYear() == year && date.getMonth() + 1 == month && date.getDate() == day
 }
-
     
 function formValidation(event) {
     event.preventDefault()
@@ -73,15 +73,16 @@ function formValidation(event) {
         ageMonths.innerText = '--'
         ageDays.innerText = '--'
         return
+    } else {
+        resetErrors()
+        const birthdate = new Date(`${yearInput.value}-${monthInput.value}-${dayInput.value}`)
+        const age = ageCalculate(birthdate)
+        ageYears.innerText = age.years
+        ageMonths.innerText = age.months
+        ageDays.innerText = age.days
+    
+        Numbers()
     }
-
-    const birthdate = new Date(`${yearInput.value}-${monthInput.value}-${dayInput.value}`)
-    const age = ageCalculate(birthdate)
-    ageYears.innerText = age.years
-    ageMonths.innerText = age.months
-    ageDays.innerText = age.days
-
-    resetErrors()
 }
 
 function ageCalculate(birthdate) {
@@ -101,6 +102,23 @@ function ageCalculate(birthdate) {
     }
 
     return { years, months, days }
+}
+
+
+function Numbers() {
+    spans.forEach((span) => {
+        const total = +span.innerText
+        const increment = Math.ceil(total / 300) 
+        
+        let start = 0
+        const timer = setInterval(() => {
+            start = start + increment
+            span.innerText = start
+            if(start >= total) {
+                span.innerText = total
+            }  
+        }, 20)
+    })
 }
 
 function resetErrors() {
