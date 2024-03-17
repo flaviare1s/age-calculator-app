@@ -7,6 +7,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32x32.png">
 
   <link rel="stylesheet" href="output.css">
+  <link rel="stylesheet" href="style.css">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,41 +17,45 @@
 
 </head>
 <body class="font-Poppins flex flex-col justify-center items-center m-auto sm:h-screen bg-light_grey">
-
-  <main class="w-[95%] sm:w-1 md:w-[60%] bg-white mt-[88px] px-6 md:px-14 py-12 rounded-tl-3xl rounded-tr-3xl rounded-bl-3xl rounded-br-[100px]">
-    <form class="w-full md:w-[80%] grid grid-cols-3">
-      <div class="flex flex-col">
-        <label class="text-xs md:text-sm font-bold text-grey uppercase tracking-[25%]" for="Day">Day</label>
-        <input class="border p-3 rounded-lg text-black font-bold text-xl md:text-[32px] tracking-[1%] w-[90%]" type="number" id="day" name="day" placeholder="DD"></input>
-        <span class="text-xs md:text-sm text-red italic mt-2" id="error-day"></span>
+  <div class="flex flex-col justify-center items-center m-auto sm:h-screen bg-light_grey striped-background md:w-[90%]">
+    <main class="w-[95%] sm:w-[80%] md:w-[90%] lg:w-[70%] xl:w-[60%] bg-white mt-[88px] px-6 md:px-14 py-12 rounded-tl-3xl rounded-tr-3xl rounded-bl-3xl rounded-br-[100px]">
+      <form class="w-full md:w-[80%] grid grid-cols-3">
+        <div class="flex flex-col">
+          <label class="text-xs md:text-sm font-bold text-grey uppercase tracking-[25%]" for="Day">Day</label>
+          <input class="border p-3 rounded-lg text-black font-bold text-xl md:text-[32px] tracking-[1%] w-[90%]" type="number" id="day" name="day" placeholder="DD"></input>
+          <span class="text-xs md:text-sm text-red italic mt-2" id="error-day"></span>
+        </div>
+        <div class="flex flex-col">
+          <label class="text-xs md:text-sm font-bold text-grey uppercase tracking-[25%]" for="month">Month</label>
+          <input class="border p-3 rounded-lg text-black font-bold text-xl md:text-[32px] tracking-[1%] w-[90%]" type="number" id="month" name="month" placeholder="MM"></input>
+          <span class="text-xs md:text-sm text-red italic mt-2" id="error-month"></span>
+        </div>
+        <div class="flex flex-col">
+          <label class="text-xs md:text-sm font-bold text-grey uppercase tracking-[25%]" for="year">Year</label>
+          <input class="border p-3 rounded-lg text-black font-bold text-xl md:text-[32px] tracking-[1%] w-[90%]" type="number" id="year" name="year" placeholder="YYYY"></input>
+          <span class="text-xs md:text-sm text-red italic mt-2" id="error-year"></span>
+        </div>
+      </form>
+      <div class="h-16 md:h-24 flex flex-col justify-center items-center md:items-end my-8 md:my-0 relative">
+        <hr class="w-full border border-light_grey absolute bottom-[50%] z-0">
+        <button id="btn" class="z-30">
+          <div class="bg-purple hover:bg-black rounded-full h-16 w-16 md:h-24 md:w-24 flex flex-col items-center justify-center z-10">
+            <img class="h-6 md:h-11 w-6 md:w-11 z-20" src="../assets/images/icon-arrow.svg" alt="Icon Arrow">
+          </div>
+        </button>
       </div>
-      <div class="flex flex-col">
-        <label class="text-xs md:text-sm font-bold text-grey uppercase tracking-[25%]" for="month">Month</label>
-        <input class="border p-3 rounded-lg text-black font-bold text-xl md:text-[32px] tracking-[1%] w-[90%]" type="number" id="month" name="month" placeholder="MM"></input>
-        <span class="text-xs md:text-sm text-red italic mt-2" id="error-month"></span>
+      <div>
+        <div class="text-[56px] md:text-[104px] font-extrabold italic text-black leading-[110%] tracking-[-2%]"><span class="text-purple">--</span> years</div>
+        <div class="text-[56px] md:text-[104px] font-extrabold italic text-black leading-[110%] tracking-[-2%]"><span class="text-purple">--</span> months</div>
+        <div class="text-[56px] md:text-[104px] font-extrabold italic text-black leading-[110%] tracking-[-2%]"><span class="text-purple">--</span> days</div>
       </div>
-      <div class="flex flex-col">
-        <label class="text-xs md:text-sm font-bold text-grey uppercase tracking-[25%]" for="year">Year</label>
-        <input class="border p-3 rounded-lg text-black font-bold text-xl md:text-[32px] tracking-[1%] w-[90%]" type="number" id="year" name="year" placeholder="YYYY"></input>
-        <span class="text-xs md:text-sm text-red italic mt-2" id="error-year"></span>
-      </div>
-    </form>
-    <div class="h-16 md:h-24 flex flex-col justify-center items-center md:items-end my-8 md:my-0 relative">
-      <hr class="w-full border border-light_grey absolute bottom-[50%] z-0">
-      <div class="bg-purple rounded-full h-16 w-16 md:h-24 md:w-24 flex flex-col items-center justify-center z-10">
-        <img class="h-6 md:h-11 w-6 md:w-11 z-20" src="../assets/images/icon-arrow.svg" alt="Icon Arrow">
-      </div>
+    </main>
+    <div class="text-xs text-center mt-3">
+      Challenge by <a class="font-bold text-purple" href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a class="font-bold text-purple" href="https://github.com/flaviare1s/">Flávia Reis</a>.
     </div>
-    <div>
-      <div class="text-[56px] md:text-[104px] font-extrabold italic text-black leading-[110%] tracking-[-2%]"><span class="text-purple">--</span> years</div>
-      <div class="text-[56px] md:text-[104px] font-extrabold italic text-black leading-[110%] tracking-[-2%]"><span class="text-purple">--</span> months</div>
-      <div class="text-[56px] md:text-[104px] font-extrabold italic text-black leading-[110%] tracking-[-2%]"><span class="text-purple">--</span> days</div>
-    </div>
-  </main>
-  
-  <div class="text-xs text-center mt-3">
-    Challenge by <a class="font-bold text-purple" href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a class="font-bold text-purple" href="https://github.com/flaviare1s/">Flávia Reis</a>.
   </div>
+  
+
 </body>
 </html>
