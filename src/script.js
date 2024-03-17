@@ -10,6 +10,12 @@ const errorMonth = document.querySelector('#error-month')
 const errorYear = document.querySelector('#error-year')
 const currentYear = new Date().getFullYear()
 
+function isValidDate(year, month, day) {
+    const date = new Date(year, month - 1, day)
+    return date.getFullYear() == year && date.getMonth() + 1 == month && date.getDate() == day
+}
+
+    
 function ageCalculate(event) {
     event.preventDefault()
     if(!form.checkValidity()) {
@@ -46,6 +52,12 @@ function ageCalculate(event) {
         inputs.forEach((input) => {
             input.classList.add('invalid')
         })
+    }
+
+    if (!isValidDate(yearInput.value, monthInput.value, dayInput.value)) {
+        if (errorDay.innerText === '' && errorMonth.innerText === '' && errorYear.innerText === '') {
+            errorDay.innerText = 'Must be a valid date'
+        }
     }
 }
 
