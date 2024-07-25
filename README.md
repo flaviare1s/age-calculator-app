@@ -29,6 +29,11 @@ Os usuários devem ser capazes de:
 - Tailwind CSS
 - JavaScript
 
+## Agradecimentos
+
+Agradeço ao Frontend Mentor por fornecer o desafio e o design inspirador. Também sou grata às comunidades de desenvolvedores que compartilharam dicas e feedback.
+
+
 ## Visualização
 
 Você pode visualizar o projeto através desse link:
