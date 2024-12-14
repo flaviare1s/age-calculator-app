@@ -96,9 +96,12 @@ function ageCalculate(birthdate) {
         months += 12
     }
     if (days < 0) {
-        const tempDate = new Date(currentDate);
-        tempDate.setMonth(currentDate.getMonth() - 1)
-        days = Math.floor((currentDate - tempDate) / (1000 * 60 * 60 * 24))
+      const tempDate = new Date(
+        currentDate.getFullYear(),
+        currentDate.getMonth(),
+        0
+      )
+      days += tempDate.getDate()
     }
 
     return { years, months, days }
@@ -139,6 +142,3 @@ form.addEventListener('submit', function(event) {
     event.preventDefault()
     formValidation(event)
 })
-
-
-
