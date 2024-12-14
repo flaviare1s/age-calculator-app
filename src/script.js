@@ -91,11 +91,8 @@ function ageCalculate(birthdate) {
     let months = currentDate.getMonth() - birthdate.getMonth()
     let days = currentDate.getDate() - birthdate.getDate()
 
-    if (months < 0 || (months === 0 && days < 0)) {
-        years--
-        months += 12
-    }
     if (days < 0) {
+      months--
       const tempDate = new Date(
         currentDate.getFullYear(),
         currentDate.getMonth(),
@@ -103,6 +100,11 @@ function ageCalculate(birthdate) {
       )
       days += tempDate.getDate()
     }
+    if (months < 0) {
+      years--
+      months += 12
+    }
+
 
     return { years, months, days }
 }
